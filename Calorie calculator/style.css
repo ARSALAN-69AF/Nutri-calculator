@@ -991,27 +991,242 @@ select {
 
 @media (max-width: 700px) {
   .sidebar {
+    width: min(82vw, 280px);
     transform: translateX(-100%);
+    box-shadow: 18px 0 40px rgba(0, 0, 0, 0.35);
   }
 
   .sidebar.open {
     transform: translateX(0);
   }
 
-  .burger { display: block; }
+  .burger {
+    display: block;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 8px 12px;
+  }
+
+  .nav-item {
+    min-height: 44px;
+    font-size: 14px;
+  }
 
   .main-content {
     margin-left: 0;
-    padding: 24px 16px;
-    padding-top: 60px;
+    max-width: none;
+    width: 100%;
+    padding: 68px 14px 28px;
   }
 
+  .view-header {
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .view-title { font-size: 24px; }
+
+  .date-btn {
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .add-food-card,
+  .history-chart-card,
+  .profile-card,
+  .calorie-ring-card,
+  .macro-card,
+  .remaining-card {
+    border-radius: var(--radius);
+  }
+
+  .add-food-card,
+  .history-chart-card,
+  .profile-card {
+    padding: 18px;
+  }
+
+  .dashboard-top {
+    gap: 14px;
+    margin-bottom: 14px;
+  }
+
+  .calorie-ring-card {
+    gap: 18px;
+    padding: 18px;
+  }
+
+  .ring-svg {
+    width: 132px;
+    height: 132px;
+  }
+
+  .macro-cards { gap: 10px; }
+  .macro-card { padding: 14px 16px; }
+
   .remaining-grid { grid-template-columns: 1fr 1fr; }
+  .remaining-card { padding: 12px 13px; }
+  .rem-label { font-size: 10px; }
+  .rem-val { font-size: 16px; }
+
+  .section-header {
+    align-items: flex-start;
+    gap: 10px;
+  }
+
   .profile-grid { grid-template-columns: 1fr; }
   .targets-grid { grid-template-columns: 1fr 1fr; }
-  .search-row { flex-wrap: wrap; }
+
+  .search-row {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(74px, auto);
+    align-items: center;
+    gap: 10px 8px;
+  }
+
   .search-wrap {
-    flex: 1 1 100%;
+    grid-column: 1 / -1;
     min-width: 0;
+  }
+
+  #food-qty.qty-input {
+    width: 100%;
+    min-height: 44px;
+  }
+
+  .qty-label { margin-left: -2px; }
+
+  .btn-add {
+    min-height: 44px;
+    padding: 10px 12px;
+  }
+
+  .suggestions-box {
+    max-height: 240px;
+  }
+
+  .sug-item {
+    padding: 12px 14px;
+  }
+
+  .log-table-wrap {
+    border: none;
+    border-radius: 0;
+    overflow: visible;
+  }
+
+  .log-table,
+  .log-table tbody,
+  .log-table tr,
+  .log-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .log-table thead { display: none; }
+
+  .log-table tbody {
+    display: grid;
+    gap: 10px;
+  }
+
+  .log-table tr {
+    background: var(--bg-2);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+
+  .log-table td {
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 9px 12px;
+    text-align: right;
+  }
+
+  .log-table td:first-child {
+    border-top: none;
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 12px 8px;
+    text-align: left;
+  }
+
+  .log-table td:not(:first-child)::before {
+    color: var(--text-3);
+    content: "";
+    font-family: var(--font-display);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .log-table td:nth-child(2)::before { content: "Qty"; }
+  .log-table td:nth-child(3)::before { content: "kcal"; }
+  .log-table td:nth-child(4)::before { content: "Protein"; }
+  .log-table td:nth-child(5)::before { content: "Carbs"; }
+  .log-table td:nth-child(6)::before { content: "Fat"; }
+  .log-table td:nth-child(7) {
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .del-row-btn {
+    min-width: 38px;
+    min-height: 34px;
+  }
+
+  .empty-row td,
+  .empty-row td:first-child {
+    display: block;
+    padding: 22px 14px;
+    text-align: center;
+  }
+
+  .empty-row td::before { display: none; }
+
+  .bar-chart {
+    gap: 7px;
+    height: 140px;
+  }
+
+  .toast {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+    max-width: none;
+  }
+}
+
+@media (max-width: 430px) {
+  .main-content {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .calorie-ring-card {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .remaining-grid,
+  .targets-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+
+  .log-totals {
+    line-height: 1.5;
   }
 }
