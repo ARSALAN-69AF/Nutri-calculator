@@ -74,6 +74,8 @@ export const FOODS = [
   { id: 59, name: "Coffee (black)",             cal: 2,   pro: 0.3, car: 0,    fat: 0,    category: "drinks" },
   { id: 60, name: "Tea (plain)",                cal: 1,   pro: 0,   car: 0.2,  fat: 0,    category: "drinks" },
   { id: 61, name: "Creatine monohydrate",       cal: 0,   pro: 0,   car: 0,    fat: 0,    category: "supplements" },
+  { id: 62, name: "Tea with sugar",             cal: 32,  pro: 0,   car: 8.0,  fat: 0,    category: "drinks" },
+  { id: 63, name: "Salt tea",                   cal: 1,   pro: 0,   car: 0.2,  fat: 0,    category: "drinks" },
 
   // ── South Indian ──
   { id: 54, name: "Idli (1 piece ~40g)",        cal: 39,  pro: 1.9, car: 8.2,  fat: 0.2,  category: "grains" },
