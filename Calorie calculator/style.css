@@ -70,11 +70,13 @@ body {
   margin-bottom: 40px;
 }
 
-.brand-icon {
-  font-size: 32px;
-  color: var(--accent);
+.brand-logo {
   display: block;
-  margin-bottom: 8px;
+  width: 76px;
+  height: 76px;
+  object-fit: cover;
+  border-radius: 18px;
+  margin: 0 auto 12px;
 }
 
 .brand-name {
@@ -258,7 +260,13 @@ select {
   padding: 0 4px;
 }
 
-.sidebar-brand .brand-icon { font-size: 20px; color: var(--accent); }
+.sidebar-brand .brand-logo {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  margin: 0;
+  flex-shrink: 0;
+}
 .sidebar-brand .brand-name { font-size: 16px; font-weight: 800; letter-spacing: -0.01em; }
 
 .sidebar-nav {
