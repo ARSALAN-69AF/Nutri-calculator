@@ -17,6 +17,7 @@ export const FOODS = [
   // ── Proteins: Meat & Eggs ──
   { id: 13, name: "Chicken breast (cooked)",    cal: 165, pro: 31,  car: 0,    fat: 3.6,  category: "protein" },
   { id: 14, name: "Chicken thigh (cooked)",     cal: 209, pro: 26,  car: 0,    fat: 10.9, category: "protein" },
+  { id: 57, name: "Chicken (cooked)",           cal: 190, pro: 29,  car: 0,    fat: 7.8,  category: "protein" },
   { id: 15, name: "Mutton / lamb (cooked)",     cal: 258, pro: 25.6, car: 0,   fat: 16.5, category: "protein" },
   { id: 16, name: "Beef / keema (cooked)",      cal: 250, pro: 26,  car: 0,    fat: 15,   category: "protein" },
   { id: 17, name: "Salmon (cooked)",            cal: 208, pro: 20,  car: 0,    fat: 13,   category: "protein" },
@@ -67,6 +68,12 @@ export const FOODS = [
   { id: 51, name: "Olive oil",                  cal: 884, pro: 0,   car: 0,    fat: 100,  category: "fats" },
   { id: 52, name: "Ghee",                       cal: 900, pro: 0,   car: 0,    fat: 99.7, category: "fats" },
   { id: 53, name: "Butter",                     cal: 717, pro: 0.9, car: 0.1,  fat: 81,   category: "fats" },
+  { id: 58, name: "Butter (salted)",            cal: 717, pro: 0.9, car: 0.1,  fat: 81,   category: "fats" },
+
+  // â”€â”€ Drinks & Supplements â”€â”€
+  { id: 59, name: "Coffee (black)",             cal: 2,   pro: 0.3, car: 0,    fat: 0,    category: "drinks" },
+  { id: 60, name: "Tea (plain)",                cal: 1,   pro: 0,   car: 0.2,  fat: 0,    category: "drinks" },
+  { id: 61, name: "Creatine monohydrate",       cal: 0,   pro: 0,   car: 0,    fat: 0,    category: "supplements" },
 
   // ── South Indian ──
   { id: 54, name: "Idli (1 piece ~40g)",        cal: 39,  pro: 1.9, car: 8.2,  fat: 0.2,  category: "grains" },
